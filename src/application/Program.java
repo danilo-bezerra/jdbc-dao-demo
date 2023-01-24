@@ -45,6 +45,10 @@ public class Program {
 		List<Seller> sellers = sellerDAO.findByDepartament(seller.getDepartment());
 		sellers.forEach(System.out::println);
 		
+		System.out.println("=== TEST | Seller - findAll ===");
+		List<Seller> allSellers = sellerDAO.findAll();
+		allSellers.forEach(System.out::println);
+		
 		
 		//System.out.println(Date.valueOf(LocalDate.parse("1985-05-09")));
 		
