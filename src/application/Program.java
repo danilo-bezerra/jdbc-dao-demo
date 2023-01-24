@@ -35,6 +35,7 @@ public class Program {
 			DB.closeStatement(st);
 			DB.closeResultSet(res);
 			DB.closeConnection();
+			
 		}
 		DAO<Seller> sellerDAO = DAOFacatory.createSellerDAO();
 		DAO<Department> departmentDAO = DAOFacatory.createDepartmentDAO();
