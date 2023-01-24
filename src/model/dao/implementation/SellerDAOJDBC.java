@@ -107,7 +107,7 @@ public class SellerDAOJDBC implements SellerDAO {
 		Department dep = new Department();
 		dep.setId(rs.getInt("departmentId"));
 		dep.setName(rs.getString("depName"));
-		return dep;
+		return dep; 
 	}
 
 	@Override
