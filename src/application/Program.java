@@ -36,15 +36,19 @@ public class Program {
 			DB.closeResultSet(res);
 			DB.closeConnection();
 		}
+		DAO<Seller> sellerDAO = DAOFacatory.createSellerDAO();
+		DAO<Department> departmentDAO = DAOFacatory.createDepartmentDAO();
 		
-		Department dep = new Department(1, "Technology");
-		Seller seller = new Seller(1, "joe", "joe@mail.com", LocalDate.parse("1985-01-02"), 3200.0, dep);
+		
+		System.out.println("=== TEST | Seller - findById ===");
+		Seller seller = sellerDAO.findById(3);
 		
 		System.out.println(seller);
 		System.out.println(Date.valueOf(LocalDate.parse("1985-05-09")));
 		
-		DAO<Seller> sellerDAO = DAOFacatory.createSellerDAO();
-		DAO<Department> departmentDAO = DAOFacatory.createDepartmentDAO();
+		
+		
+		
 
 	}
 

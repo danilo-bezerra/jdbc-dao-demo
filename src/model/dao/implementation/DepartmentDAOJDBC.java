@@ -10,19 +10,19 @@ public class DepartmentDAOJDBC implements DAO<Department> {
 	@Override
 	public void insert(Department obj) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void update(Department obj) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void deleteById(Integer id) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
