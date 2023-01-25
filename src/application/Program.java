@@ -34,6 +34,13 @@ public class Program {
 		SellerDAO sellerDAO = DAOFactory.createSellerDAO();
 		DAO<Department> departmentDAO = DAOFactory.createDepartmentDAO();
 		
+		System.out.println("=== TEST | Seller - insert ===");
+		Department dep = new Department(2, null);
+		Seller seller1 = new Seller("Anne", "anne.com", LocalDate.parse("1985-05-08"), 3200.0, dep);
+		sellerDAO.insert(seller1);
+		System.out.println("Seller1: " + seller1);
+		
+		System.out.println();
 		
 		System.out.println("=== TEST | Seller - findById ===");
 		Seller seller = sellerDAO.findById(3);
@@ -44,6 +51,8 @@ public class Program {
 		System.out.println("=== TEST | Seller - findByDepartment ===");
 		List<Seller> sellers = sellerDAO.findByDepartament(seller.getDepartment());
 		sellers.forEach(System.out::println);
+		
+		System.out.println();
 		
 		System.out.println("=== TEST | Seller - findAll ===");
 		List<Seller> allSellers = sellerDAO.findAll();
