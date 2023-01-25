@@ -35,11 +35,15 @@ public class Program {
 		DAO<Department> departmentDAO = DAOFactory.createDepartmentDAO();
 		
 		System.out.println("=== TEST | Seller - insert ===");
-		Department dep = new Department(2, null);
-		Seller seller1 = new Seller("Anne", "anne.com", LocalDate.parse("1985-05-08"), 3200.0, dep);
+		Department dep1 = new Department(2, null);
+		Seller seller1 = new Seller(null,"Alfred", "alfred@email.com", LocalDate.parse("1985-05-08"), 3200.0, dep1);
 		sellerDAO.insert(seller1);
 		System.out.println("Seller1: " + seller1);
 		
+		System.out.println("=== TEST | Seller - update ===");
+		Department dep2 = new Department(2, null);
+		Seller seller2 = new Seller(15,"Alfred Orange", "alfred_coder@email.com", LocalDate.parse("1985-05-08"), 3900.0, dep2);
+		sellerDAO.update(seller2);
 		System.out.println();
 		
 		System.out.println("=== TEST | Seller - findById ===");
