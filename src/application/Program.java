@@ -44,6 +44,14 @@ public class Program {
 		Department dep2 = new Department(2, null);
 		Seller seller2 = new Seller(15,"Alfred Orange", "alfred_coder@email.com", LocalDate.parse("1985-05-08"), 3900.0, dep2);
 		sellerDAO.update(seller2);
+		
+		System.out.println();
+		
+		System.out.println("=== TEST | Seller - delete ===");
+		sellerDAO.deleteById(8);
+		sellerDAO.deleteById(9);
+		System.out.println("Deleted!");
+		
 		System.out.println();
 		
 		System.out.println("=== TEST | Seller - findById ===");
